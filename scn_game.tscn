@@ -6,12 +6,14 @@
 
 [node name="Root" type="Node2D"]
 
-[node name="RefHolder" type="Node2D" parent="." node_paths=PackedStringArray("m_PrivateRefN2D", "m_PublicRefN2D", "m_PrivateA", "m_PublicA")]
+[node name="RefHolder" type="Node2D" parent="." node_paths=PackedStringArray("m_PrivateRefN2D", "m_PublicRefN2D", "m_PrivateA", "m_PublicA", "m_PrivateB", "m_PublicB")]
 script = ExtResource("1_1l3ud")
 m_PrivateRefN2D = NodePath("Node2D")
 m_PublicRefN2D = NodePath("Node2D")
 m_PrivateA = NodePath("ScriptA")
 m_PublicA = NodePath("ScriptA")
+m_PrivateB = NodePath("ScriptB")
+m_PublicB = NodePath("ScriptB")
 
 [node name="Node2D" type="Node2D" parent="RefHolder"]
 

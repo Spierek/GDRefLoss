@@ -8,4 +8,7 @@ public partial class RefHolder : Node2D
 
 	[Export] private ScriptA m_PrivateA;
 	[Export] public ScriptA m_PublicA;
+	
+	[Export] private ScriptB m_PrivateB;
+	[Export] public ScriptB m_PublicB;
 }
