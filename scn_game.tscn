@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ce16d2kru7u5a"]
+[gd_scene load_steps=4 format=3 uid="uid://ce16d2kru7u5a"]
 
 [ext_resource type="Script" path="res://RefHolder.cs" id="1_1l3ud"]
 [ext_resource type="Script" path="res://ScriptA.cs" id="2_j45pq"]
+[ext_resource type="Script" path="res://ScriptB.cs" id="3_xaqve"]
 
 [node name="Root" type="Node2D"]
 
@@ -16,3 +17,10 @@ m_PublicA = NodePath("ScriptA")
 
 [node name="ScriptA" type="Node2D" parent="RefHolder"]
 script = ExtResource("2_j45pq")
+
+[node name="ScriptB" type="Node2D" parent="RefHolder" node_paths=PackedStringArray("m_PrivateS2D", "m_PublicS2D")]
+script = ExtResource("3_xaqve")
+m_PrivateS2D = NodePath("Sprite2D")
+m_PublicS2D = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="RefHolder/ScriptB"]
